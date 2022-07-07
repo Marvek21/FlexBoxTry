@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    line-height: 1.5; /* line-height é o espacamento entre as linhas */
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 101, 252, 0.712);
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none; /* Isto faz com que tire aqueles á frente dos nomes da lista */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar {
+    background-color: rgb(33, 83, 245);
+    color: rgb(255, 255, 255);
+    height: 100px;
+}
+
+.navbar .logo {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.navbar .container { /*Aqui supostamente tou agrupar os dois */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Aqui faz com que a flex box aproveite o tamanho todo do container */
+}
+
+.navbar a { /* Aqui tou a ir buscar os botões que tao ligados ao navbar com a ancora (a) */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar ul { /* Aqui tou a ir buscar a ul ao navbar e meter-la num row */
+    display: flex;
+}
+
+.navbar ul li { /*Aqui vou buscar os items individuais e adicionar espaço entre eles */
+    margin-left: 20px;
+}
+
+.navbar a:hover { /* Aqui cada vez que passar o rato por cima dos botoes aparece uma cor */
+    color: rgb(0, 0, 0);
+}
+
+.header { /* Aqui tou a customizar o header */
+    background-color: rgb(5, 50, 255);
+    color: white;
+    min-height: 400px;
+}
+
+.header h1 { /* Aqui tou a customizar o h1 (titulo do header) */
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 1.2;
+}
+
+.header img {  /*Aqui tou a meter max width da img a 400 e a mover la*/
+    max-width: 400px;
+    margin-left: 5%;
+}
+
+.header .container { /* Aqui tou a a alinhar os items dentro do container do header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxes .container { /* Aqui tou a meter as caixas em flex row */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.box { /*Aqui tou a customizar as caixas*/
+    flex: 1;
+    background-color: rgb(5, 50, 255);
+    color: white;
+    border-radius: 10px;
+    margin: 30px 10px;
+    box-shadow: 0 3px 5px black;
+    padding: 15px 20px;
+}
+
+.box i { /*Aqui da espaço entre os icons e o texto */
+    margin-right: 10px;
+}
+
+@media (max-width:768px) { /* Aqui faço com que o site seja responsivo o header container fica em uma coluna e as caixas ficam em block */
+    .header .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .boxes .container {
+        display: block;
+        text-align: center;
+    }
+}
