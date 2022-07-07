@@ -1,2 +1,2 @@
 # FlexBoxTry
-My attempt at a FlexBox after following a tuturial.
+My attempt at FlexBox after following a tuturial.
